@@ -32,7 +32,7 @@ app.get('/search', (req, res) => {
 
 // Add a post object to the list
 app.post('/posts', (req, res) => {
-    if(req.body.data && req.body.data.id && req.body.data.story) {
+    if(req.body.data && req.body.data.id && req.body.data.title && req.body.data.story) {
         data.push(req.body.data)
         return res.status(200).json(successMessage("Add post successful", req.body.data))
     } 
